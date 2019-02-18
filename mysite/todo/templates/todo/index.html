@@ -1,21 +1,21 @@
 {% extends 'todo/base.html' %}
 
 {% block content %}
-    <h1 style="color :blue;">Comment</h1>
+    <h1 style="text-align: center;color :rgb(255, 0, 170);">FAMILY</h1>
 
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
     <form action="{% url 'todo:create' %}" method="post">
         {% csrf_token %}
         <!-- Todo Name -->
         <div class="form-group">
-            <label for="todo" class="col-sm-3 control-label">Todo</label>
+            <label for="todo" class="col-sm-3 control-label" style="color :rgb(164, 39, 236);">Add family members</label>
             <div class="col-sm-6">
                 {{ form.body }}
             </div>
         </div>
 
         <!-- Add Todo Button -->
-        <div class="form-group">
+        <div class="form-group"style="margin-left:500px;">
             <div class="col-sm-offset-3 col-sm-6">
                 <button type="submit" class="btn btn-default" >
                     <i class="fa fa-plus"></i> ADD
@@ -27,10 +27,10 @@
     
 
     <!-- Current Todos -->
-    <h2 style="color :blue;">Current Todos</h2>
+    <h2 style="text-align: center;color :rgb(255, 0, 170);">Member's name</h2>
     <table class="table table-striped todo-table">
         <thead>
-            <th>Todos</th><th>&nbsp;</th>
+            <th style="color :rgb(169, 56, 192);">Member</th><th>&nbsp;</th>
         </thead>
 
         <tbody>
@@ -50,5 +50,7 @@
             {% endfor %}
         </tbody>
     </table>
+    
+    <h3 style="text-align: center;color :rgb(25, 29, 238);">นางสาวสุดาทิพย์ ทวีสุข รหัสนักศึกษา 5910110354</h2>
     
 {% endblock %}
